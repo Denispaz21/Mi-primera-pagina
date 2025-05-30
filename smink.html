@@ -1,0 +1,121 @@
+SMINK/
+│
+├── app.py                    ← Archivo principal de Python
+├── templates/                ← Carpeta para HTML
+│   └── index.html
+├── static/                   ← Carpeta para CSS y recursos
+│   └── styles.css
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>SMINK - Tienda de Maquillaje</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>SMINK</h1>
+        <p>Tu tienda favorita de maquillaje</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Ofertas</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Variedades de Maquillaje</h2>
+        <div class="productos">
+            <div class="producto">
+                <img src="https://via.placeholder.com/150" alt="Base líquida">
+                <h3>Base líquida</h3>
+                <p>$15.00</p>
+            </div>
+            <div class="producto">
+                <img src="https://via.placeholder.com/150" alt="Labial">
+                <h3>Labial Mate</h3>
+                <p>$10.00</p>
+            </div>
+            <div class="producto">
+                <img src="https://via.placeholder.com/150" alt="Sombras">
+                <h3>Paleta de Sombras</h3>
+                <p>$20.00</p>
+            </div>
+            <!-- Puedes agregar más productos -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SMINK - Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff0f5;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #e75480;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+nav ul {
+    background-color: #ffb6c1;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0.5em;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+main {
+    padding: 2em;
+}
+
+.productos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.producto {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1em;
+    margin: 1em;
+    background-color: white;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+footer {
+    text-align: center;
+    background-color: #e75480;
+    color: white;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
